@@ -60,10 +60,10 @@ class Tic_Tac_Toe():
 
     def draw_X(self, logicalPosition):
         gridPosition = self.convertLogicalToGridPosition(logicalPosition)
-        self.canvas.create_line(gridPosition[0] + symbolSize, gridPosition[1] - symbolSize,
-                                 gridPosition[0] + symbolSize, gridPosition[1] + symbolSize, width=symbolSize,
-                                 fill=symbol_X_color)
         self.canvas.create_line(gridPosition[0] - symbolSize, gridPosition[1] - symbolSize,
+                                 gridPosition[0] + symbolSize, gridPosition[1] + symbolSize, width=symbolThickness,
+                                 fill=symbol_X_color)
+        self.canvas.create_line(gridPosition[0] - symbolSize, gridPosition[1] + symbolSize,
                                 gridPosition[0] + symbolSize, gridPosition[1] - symbolSize, width=symbolThickness,
                                 fill=symbol_X_color)     
 
